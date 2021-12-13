@@ -1,0 +1,18 @@
+---
+
+- hosts: all
+  become: true
+  pre_tasks:
+
+  - name: install updates (Debian)
+    apt:
+      upgrade: dist
+      update_cache: true
+    when: ansible_distribution == "Debian"
+
+
+  - name: install updates (Ubuntu)
+    apt:
+      upgrade: dist
+      update_cache: true
+    when: ansible_distribution == "Ubuntu"
