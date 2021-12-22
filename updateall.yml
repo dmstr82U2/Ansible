@@ -16,3 +16,15 @@
       upgrade: dist
       update_cache: true
     when: ansible_distribution == "Ubuntu"
+
+  - name: install tmux
+    apt:
+      name: tmux
+      state: latest
+    when: ansible_distribution == "Ubuntu"
+
+  - name: install tmux
+    apt:
+      name: tmux
+      state: latest
+    when: ansible_distribution == "CentOS"  
