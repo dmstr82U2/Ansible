@@ -5,7 +5,7 @@ kubernode2
 dockerstuff
 dmraspi3a
 ansible-ct
-emby
+emby.clark.net
 # proxmox
 
 [dns_servers]
@@ -33,4 +33,4 @@ dmraspi3a
 # 192.168.9.160
 
 [media_server]
-emby
+emby.clark.net
