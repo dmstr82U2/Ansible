@@ -8,23 +8,11 @@
     apt:
       upgrade: dist
       update_cache: true
-    when: ansible_distribution == "Debian"
-
-
-  - name: install updates (Ubuntu)
-    apt:
-      upgrade: dist
-      update_cache: true
-    when: ansible_distribution == "Ubuntu"
+    when: ansible_distribution == ["Ubuntu", "Debian"]
 
   - name: install tmux
     apt:
       name: tmux
-      state: latest
-    when: ansible_distribution == "Ubuntu"
-
-  - name: install tmux
-    apt:
-      name: tmux
-      state: latest
-    when: ansible_distribution == "CentOS"  
+    #  state: absent
+      state: true
+    when: ansible_distribution == ["Ubuntu", "Debian"]
