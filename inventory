@@ -32,7 +32,7 @@ dockerstuff
 
 
 [test_servers]
-linuxtest1
-
+# linuxtest1 apache_package=apache2 php_package=libapache2-mod-php Using variables
+ linuxtest1
 [media_servers]
 emby
