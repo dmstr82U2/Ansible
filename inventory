@@ -9,6 +9,7 @@ emby
 linuxtest1
 proxmox
 homevm
+# pclarksazurelinuxvm.westus2.cloudapp.azure.com
 
 [dns_servers]
 piholect
@@ -18,6 +19,7 @@ piholect2
 kubermstr
 kubernode1
 kubernode2
+
 
 [ha_servers]
  homevm
@@ -37,3 +39,6 @@ linuxtest1
 
 [media_servers]
 emby
+
+[rri_servers]
+# pclarksazurelinuxvm.westus2.cloudapp.azure.com
