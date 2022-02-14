@@ -8,3 +8,11 @@
     apt:
       upgrade: dist
       update_cache: true
+
+   
+  - name: install cockpit
+    apt:
+      name: cockpit
+      
+    
+  
