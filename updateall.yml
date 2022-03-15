@@ -4,7 +4,7 @@
   become: true
   pre_tasks:
 
-  - name: install updates (Debian)
+  - name: install updates 
     apt:
       upgrade: dist
       update_cache: true

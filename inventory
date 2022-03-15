@@ -9,7 +9,7 @@ emby
 linuxtest1
 proxmox
 homevm
-pclarksazurelinuxvm.westus2.cloudapp.azure.com
+
 
 [dns_servers]
 piholect
@@ -41,4 +41,3 @@ linuxtest1
 emby
 
 [rri_servers]
-pclarksazurelinuxvm.westus2.cloudapp.azure.com
