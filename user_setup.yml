@@ -1,0 +1,39 @@
+---
+- name: System update, upgrade, install programs, copy ssh keys, create user and reboot
+  hosts: all
+  become: yes
+  tasks:
+    - name: Update package index
+      apt:
+        update_cache: yes
+
+    - name: Upgrade packages
+      apt:
+        upgrade: dist
+
+    - name: Install bat and tmux
+      apt:
+        name:
+        - bat
+        - tmux
+        state: present
+
+    - name: Copy ssh keys
+      copy:
+        src: /etc/ssh/ssh_host_ed25519_key
+        dest: /home/asible/.ssh/
+        owner: user
+        group: user
+        mode: 0600
+
+    - name: Create ansible user
+      user:
+        name: ansible
+        state: present
+        groups: sudo
+        shell: /bin/bash
+
+    - name: Reboot the system
+      reboot:
+        timeout: 300
+        connect_timeout: 300
