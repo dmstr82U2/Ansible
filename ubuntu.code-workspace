@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"name": "Ansible",
+			"path": "."
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true,
+		"ansible.python.interpreterPath": "/home/ubuntu/ansible-env/bin/python",
+		"yaml.schemas": {
+			"https://raw.githubusercontent.com/ansible/ansible-lint/main/src/ansiblelint/schemas/requirements.json": "file:///home/ubuntu/Ansible/install_apache.yml"
+		}
+	}
+}
