@@ -1,6 +1,6 @@
 ---
 
-- hosts: learning_servers
+- hosts: all
   become: true
   pre_tasks:
 
