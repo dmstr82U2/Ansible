@@ -1,74 +1,74 @@
 [all]
-192.168.1.203
-192.168.1.7 
-192.168.1.8 
-192.168.1.9 
-192.168.1.11 
-# 192.168.1.13 homeassistant
-192.168.1.15 
-192.168.1.16 
-192.168.1.29 
-192.168.1.52 
-192.168.1.61 
-# 192.168.2.7 
-# 192.168.2.8 
+ansible-ct
 alpha 
 beta 
-192.168.2.10
 gamma
-# 192.168.2.61 
-# 192.168.1.33 
-# 192.168.1.34 
-# 192.168.1.50 
-# 192.168.1.18 
-# 192.168.1.10 
+automation
+dm-kasm
+dockerstuff
+homeassistant
+learnlinux
+netbootxyz
+pi.hole
+piholect2
+truenas
+semaphorevm
+192.168.1.6 #prxmox
+192.168.1.8 #proxmox3 
 
-[test_servers]
-192.168.1.203
+[test_linux]
+ansible-ct
 
-[learning_servers]
-192.168.1.203
+[pi_servers]
 alpha 
-192.168.2.10 
+beta
 gamma
+192.168.9.158
 
 
 [dns_servers]
-192.168.1.7 
-192.168.1.9 
-192.168.1.16 
+pi.hole
+piholect2
 
-[prox_servers]
-192.168.1.8 
-192.168.1.6 
-192.168.1.52 
+[pialert_servers]
+192.168.1.7 #pialert
+
+
+[proxmox_servers]
+192.168.1.8  #proxmox
+192.168.1.6  #proxmox3
+192.168.1.52 #pbsvr
 
 [automation_servers]
-192.168.1.11 
-192.168.1.61 
-
+automation 
+semaphorevm 
+ansible-ct
 
 [ha_server]
-192.168.1.13 
-192.168.1.29 
-
-
-[Windows_servers]
-# 192.168.1.10 
+homeassistant 
+ 
+[Windows_desktops]
+dmoffice2 
+codx-pclark1
+COLXI-PCLARK
+rufus11
+dmlptp1
+dmlptp3
 
 [nas]
-192.168.1.15 
-
+truenas 
 
 [anroid_servers]
-# 192.168.1.33 pixel-6
-# 192.168.1.34 maltabe9
-# 192.168.1.50 pixel2xl
-# 192.168.2.7 sonytv
-# 192.168.2.8 shield2
-# 192.168.2.61 shieldtv
+pixel-6    #192.168.1.33
+maltabe9   #192.168.1.34
+pixel2xl   #192.168.1.50
+192.168.2.7  #sonytv
+192.168.2.8  #shield2
+192.168.2.61 #shieldtv
 
+[kasm]
+dm-kasm
 
-
-
+[pxe_servers]
+netbootxyz
 
