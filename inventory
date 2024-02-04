@@ -17,7 +17,7 @@ semaphorevm
 192.168.1.8 #proxmox3 
 
 [test_linux]
-ansible-ct
+learnlinux
 
 [pi_servers]
 alpha 
