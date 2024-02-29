@@ -6,15 +6,14 @@ gamma
 automation
 dm-kasm
 dockerstuff
-homeassistant
 learnlinux
 netbootxyz
 pi.hole
 piholect2
 truenas
 semaphorevm
-192.168.1.6 #prxmox
-192.168.1.8 #proxmox3 
+# 192.168.1.6 #prxmox
+# 192.168.1.8 #proxmox3 
 
 [test_linux]
 learnlinux

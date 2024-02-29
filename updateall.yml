@@ -1,18 +1,10 @@
 ---
-
+- name: Preinstall
 - hosts: all
   become: true
   pre_tasks:
 
-  - name: install updates 
-    apt:
-      upgrade: dist
-      update_cache: true
-
-   
-  - name: install cockpit
-    apt:
-      name: cockpit
-      
-    
-  
+- name: Install updates
+  apt:
+    upgrade: dist
+    update_cache: true
