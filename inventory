@@ -14,7 +14,7 @@ semaphorevm
 pialert
 ansible-ct
 
-sud# 192.168.1.6 #prxmox
+# 192.168.1.6 #prxmox
 # 192.168.1.8 #proxmox3 
 
 [test_linux]
