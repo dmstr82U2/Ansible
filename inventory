@@ -24,7 +24,6 @@ learnlinux
 alpha 
 beta
 gamma
-192.168.9.158
 
 
 [dns_servers]
@@ -49,23 +48,23 @@ ansible-ct
 homeassistant 
  
 [Windows_desktops]
-dmoffice2 
-codx-pclark1
-COLXI-PCLARK
-rufus11
-dmlptp1
-dmlptp3
+# dmoffice2 
+# codx-pclark1
+# COLXI-PCLARK
+# rufus11
+# dmlptp1
+#dmlptp3
 
 [nas]
 truenas 
 
 [anroid_servers]
-pixel-6    #192.168.1.33
-maltabe9   #192.168.1.34
-pixel2xl   #192.168.1.50
-192.168.2.7  #sonytv
-192.168.2.8  #shield2
-192.168.2.61 #shieldtv
+# pixel-6    #192.168.1.33
+# maltabe9   #192.168.1.34
+# pixel2xl   #192.168.1.50
+# 192.168.2.7  #sonytv
+# 192.168.2.8  #shield2
+# 192.168.2.61 #shieldtv
 
 [kasm]
 dm-kasm
