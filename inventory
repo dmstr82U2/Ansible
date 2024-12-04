@@ -3,10 +3,10 @@ ansible-ct
 alpha 
 beta 
 gamma
-automation
+192.168.1.11
+192.168.1.28
 dm-kasm
 dockerstuff
-homeassistant
 learnlinux
 netbootxyz
 pi.hole
@@ -16,6 +16,8 @@ semaphorevm
 192.168.1.6 #prxmox
 192.168.1.8 #proxmox3 
 spare-linux
+n8n
+esphome
 
 [test_linux]
 learnlinux
