@@ -1,0 +1,49 @@
+---
+- name: Create user clarkp and configure SSH
+  hosts: learnlinux
+  become: yes
+  tasks:
+    - name: Create user clarkp
+      user:
+        name: clarkp
+        state: present
+        groups: sudo
+
+    - name: Create .ssh directory for clarkp
+      file:
+        path: /home/clarkp/.ssh
+        state: directory
+        owner: clarkp
+        group: clarkp
+        mode: '0700'
+
+    - name: Copy SSH key to clarkp's authorized_keys
+      copy:
+        src: /home/ubuntu/.ssh/ansible.pub
+        dest: /home/clarkp/.ssh/authorized_keys
+        owner: clarkp
+        group: clarkp
+        mode: '0600'
+
+    - name: Ensure known_hosts file exists
+      file:
+        path: /home/clarkp/.ssh/known_hosts
+        state: touch
+        owner: clarkp
+        group: clarkp
+        mode: '0644'
+
+    - name: Add SSH fingerprint to known_hosts
+      shell: ssh-keyscan -H {{ inventory_hostname }} >> /home/clarkp/.ssh/known_hosts
+      args:
+        creates: /home/clarkp/.ssh/known_hosts
+      become_user: clarkp
+
+    - name: Disable strict host key checking for clarkp
+      lineinfile:
+        path: /home/clarkp/.ssh/config
+        line: "StrictHostKeyChecking no"
+        create: yes
+        owner: clarkp
+        group: clarkp
+        mode: '0644'
