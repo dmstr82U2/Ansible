@@ -1,6 +1,6 @@
 ---
 - name: Create user ansible and configure SSH
-  hosts: alpha
+  hosts: staging
   become: true
   become_user: root
   tasks:
@@ -9,6 +9,8 @@
         name: ansible
         state: present
         groups: sudo
+        append: true
+        password: "K@yn@6678qw!@"
 
     - name: Create .ssh directory for ansible
       ansible.builtin.file:

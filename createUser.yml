@@ -1,26 +1,20 @@
 ---
 - name: Setup new user
-  hosts: test_linux
-  become: yes
+  hosts: all
+  become: true
+  become_user: root
   tasks:
     - name: Create a new user
-      user:
-        name: "clarkp"
+      ansible.builtin.user:
+        name: "ansible"
         state: present
         groups: sudo
-        append: yes
+        append: true
         # password: "{{ password | password_hash('sha512') }}"
-    - name: "Create .ssh directory"   
-      file:
-        path: "/home/clarkp/.ssh"
-        owner: "clarkp"
-        group: clarkp
+    - name: "Create .ssh directory"
+      ansible.builtin.file:
+        path: "/home/ansible/.ssh"
+        state: "directory"
+        owner: "ansible"
+        group: ansible
         mode: 0700
-
-    - name: "Copy public key to authorized_keys"
-      copy:
-        src: "/home/clarkp/.ssh/ansible.pub"
-        dest: "/home/clarkp/.ssh/authorized_keys"
-        owner: "clarkp"
-        group: clarkp
-        mode: 0600

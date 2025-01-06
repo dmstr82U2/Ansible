@@ -1,78 +1,63 @@
 [all]
-ansible-ct
 alpha 
 beta 
-gamma
-192.168.1.11
-192.168.1.28
+192.168.2.9 #gamma
+192.168.1.11 #automation
+192.168.2.11 #beta
 dm-kasm
 dockerstuff
 learnlinux
 netbootxyz
 pi.hole
 piholect2
-truenas
-semaphorevm
-192.168.1.6 #prxmox
-192.168.1.8 #proxmox3 
-spare-linux
+192.168.1.61 #semaphore
+;192.168.1.52 #spare-linux
 n8n
-esphome
+;192.168.1.32 #esphome
+;iventoy
 
 [test_linux]
 learnlinux
-spare-linux
+
 
 [pi_servers]
 alpha 
-beta
-gamma
-192.168.9.158
+192.168.2.11 #beta
+192.168.2.9 #gamma
+
 
 
 [dns_servers]
 pi.hole
 piholect2
 
-[pialert_servers]
-192.168.1.7 #pialert
-
-
-[proxmox_servers]
-192.168.1.8  #proxmox
-192.168.1.6  #proxmox3
-192.168.1.52 #pbsvr
-
 [automation_servers]
 automation 
 semaphorevm 
-ansible-ct
 
-[ha_server]
-homeassistant 
- 
+
 [Windows_desktops]
-dmoffice2 
-codx-pclark1
-COLXI-PCLARK
-rufus11
-dmlptp1
-dmlptp3
+;dmoffice2 
+;codx-pclark1
+;COLXI-PCLARK
+;rufus11
+;dmlptp1
+;sdmlptp3
 
-[nas]
-truenas 
 
 [anroid_servers]
-pixel-6    #192.168.1.33
-maltabe9   #192.168.1.34
-pixel2xl   #192.168.1.50
-192.168.2.7  #sonytv
-192.168.2.8  #shield2
-192.168.2.61 #shieldtv
+; pixel-6    #192.168.1.33
+;maltabe9   #192.168.1.34
+;pixel2xl   #192.168.1.50
+;192.168.2.7  #sonytv
+;192.168.2.8  #shield2
+;192.168.2.61 #shieldtv  
 
-[kasm]
+[virtual_servers]
 dm-kasm
+netbootxyz  
+inventoy
 
-[pxe_servers]
-netbootxyz
 
+[staging]
+192.168.2.9
