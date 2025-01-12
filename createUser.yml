@@ -10,11 +10,11 @@
         state: present
         groups: sudo
         append: true
-        # password: "{{ password | password_hash('sha512') }}"
+        password: "{{ password | password_hash('sha512') }}"
     - name: "Create .ssh directory"
       ansible.builtin.file:
         path: "/home/ansible/.ssh"
         state: "directory"
         owner: "ansible"
         group: ansible
-        mode: 0700
+        mode: "700"

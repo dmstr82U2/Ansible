@@ -1,7 +1,7 @@
 [all]
 alpha 
 beta 
-192.168.2.9 #gamma
+192.168.2.9 #gammacloudcutter
 192.168.1.11 #automation
 192.168.2.11 #beta
 dm-kasm
@@ -13,8 +13,8 @@ piholect2
 192.168.1.61 #semaphore
 ;192.168.1.52 #spare-linux
 n8n
-;192.168.1.32 #esphome
-;iventoy
+192.168.1.32 #esphome
+iventoy
 
 [test_linux]
 learnlinux

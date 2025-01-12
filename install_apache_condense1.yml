@@ -15,12 +15,12 @@
         - apache2
         - libapache2-mod-php
        STATE: latest
-     WHEN:: ansible_distribution == "Ubuntu"
+     WHEN: ansible_distribution == "Ubuntu"
 
    - NAME: update repository index
      APT:
        UPDATE_CACHE: yes
-    WHEN:: ansible_distribution == "Debian"
+     WHEN: ansible_distribution == "Debian"
  
    - NAME: Install apache and php packages for Debian
      ansible.builtin.apt:
@@ -28,4 +28,4 @@
          - apache2
          - libapache2-mod-php
        STATE:: latest
-     WHEN:: ansible_distribution == "Debian"
+     WHEN: ansible_distribution == "Debian"

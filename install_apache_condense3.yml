@@ -1,13 +1,14 @@
 ---
  
- - hosts: all
-   become: true
-   tasks:
+- name: Install Apache and PHP
+  hosts: all
+  become: true
+  tasks:
  
-   - name: install apache and php
-     package:
-       name:
-         - "Template:Apache package"
-         - "Template:Php package"
-       state: latest
-       update_cache: yes
+  - name: Install Apache and PHP
+    package:
+      name:
+        - "Template:Apache package"
+        - "Template:Php package"
+      state: present
+      update_cache: yes
