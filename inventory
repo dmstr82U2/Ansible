@@ -1,10 +1,16 @@
 [all]
+<<<<<<< HEAD
 ansible-ct
+=======
+alpha 
+>>>>>>> e10078ff0953bb3c46a4a38cda192e05d8b281af
 beta 
-gamma
-automation
+192.168.2.9 #gammacloudcutter
+192.168.1.11 #automation
+192.168.2.11 #beta
 dm-kasm
 dockerstuff
+<<<<<<< HEAD
 # homeassistant
 # learnlinux
 netbootxyz
@@ -23,6 +29,17 @@ netbootxyz
 zibee2mqtt
 iventoy
 192.168.1.34 #reustdesk
+=======
+learnlinux
+netbootxyz
+pi.hole
+piholect2
+192.168.1.61 #semaphore
+;192.168.1.52 #spare-linux
+n8n
+192.168.1.32 #esphome
+iventoy
+>>>>>>> e10078ff0953bb3c46a4a38cda192e05d8b281af
 
 [linux_server]
 automation
@@ -30,6 +47,7 @@ dm-kasm
 dockerstuff
 # homeassistant
 learnlinux
+<<<<<<< HEAD
 netbootxyz
 pi.hole
 piholect2
@@ -55,12 +73,22 @@ zibee2mqtt
 # beta
 # gamma
 # 192.168.9.158
+=======
+
+
+[pi_servers]
+alpha 
+192.168.2.11 #beta
+192.168.2.9 #gamma
+
+>>>>>>> e10078ff0953bb3c46a4a38cda192e05d8b281af
 
 
 [dns_servers]
 # pi.hole
 # piholect2
 
+<<<<<<< HEAD
 [pialert_servers]
 # 192.168.1.7 #pialert
 
@@ -98,8 +126,40 @@ zibee2mqtt
 # 192.168.2.61 #shieldtv
 
 [kasm]
-dm-kasm
+=======
+[automation_servers]
+automation 
+semaphorevm 
 
+
+[Windows_desktops]
+;dmoffice2 
+;codx-pclark1
+;COLXI-PCLARK
+;rufus11
+;dmlptp1
+;sdmlptp3
+
+
+[anroid_servers]
+; pixel-6    #192.168.1.33
+;maltabe9   #192.168.1.34
+;pixel2xl   #192.168.1.50
+;192.168.2.7  #sonytv
+;192.168.2.8  #shield2
+;192.168.2.61 #shieldtv  
+
+[virtual_servers]
+>>>>>>> e10078ff0953bb3c46a4a38cda192e05d8b281af
+dm-kasm
+netbootxyz  
+inventoy
+
+<<<<<<< HEAD
 [pxe_servers]
 # netbootxyz
+=======
+>>>>>>> e10078ff0953bb3c46a4a38cda192e05d8b281af
 
+[staging]
+192.168.2.9

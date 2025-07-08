@@ -1,31 +1,31 @@
 ---
  
- - hosts: all
-   become: true
-   tasks:
+ - HOSTS: all
+   BECOME: true
+   TASKS:
  
-   - name: update repository index
-     apt:
-       update_cache: yes
-     when: ansible_distribution == "Ubuntu"
- 
-   - name: install apache2 and php packages for Ubuntu
-     apt:
-       name:
-         - apache2
-         - libapache2-mod-php
-       state: latest
-     when: ansible_distribution == "Ubuntu"
- 
-   - name: update repository index
-     apt:
-       update_cache: yes
-     when: ansible_distribution == "Debian"
- 
-   - name: install apache and php packages for Debian
+   - NAME: update repository index
      ansible.builtin.apt:
-       name:
+       UPDATE_CACHE: yes
+     WHEN: ansible_distribution == "Ubuntu"
+ 
+   - NAME: install apache2 and php packages for Ubuntu
+     APT:
+       NAME:
+        - apache2
+        - libapache2-mod-php
+       STATE: latest
+     WHEN: ansible_distribution == "Ubuntu"
+
+   - NAME: update repository index
+     APT:
+       UPDATE_CACHE: yes
+     WHEN: ansible_distribution == "Debian"
+ 
+   - NAME: Install apache and php packages for Debian
+     ansible.builtin.apt:
+       NAME:
          - apache2
          - libapache2-mod-php
-       state: latest
-     when: ansible_distribution == "Debian"
+       STATE:: latest
+     WHEN: ansible_distribution == "Debian"

@@ -1,8 +1,28 @@
 ---
+<<<<<<< HEAD
 - name: Update Ssh Key       
   hosts: test_linux
-  tasks:
+=======
 
+- name: Ensure SSH service is running and authorized key is set
+  hosts: all
+  become: true
+  become_user: root
+  vars_files:
+   - vars/users.yml
+
+>>>>>>> e10078ff0953bb3c46a4a38cda192e05d8b281af
+  tasks:
+   - name: Create users
+     ansible.builtin.user:
+      name: "{{ item.user }}"
+      create_home: true
+      comment: "{{ item.comment }}"
+      uid: "{{ item.uid }}"
+      state: "{{ item.state }}"
+     with_items: "{{ user }}"
+
+<<<<<<< HEAD
 - name: Set authorized key taken from file
   authorized_key:
     user: charlie
@@ -11,3 +31,16 @@
 
 
 
+=======
+   - name: Create a directory if it does not exist
+     ansible.builtin.file:
+       path: /home/ansible/.ssh
+       state: directory
+       mode: '0755'
+      
+   - name: Set authorized key taken from file
+     ansible.posix.authorized_key:
+       user: ubuntu
+       state: present
+       key: "{{ lookup('file', '~/.ssh/ansible.pub') }}"
+>>>>>>> e10078ff0953bb3c46a4a38cda192e05d8b281af

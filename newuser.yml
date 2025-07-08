@@ -1,0 +1,51 @@
+---
+- name: Create user ansible and configure SSH
+  hosts: alpha
+  become: true
+  become_user: root
+  tasks:
+    - name: Create user ansible
+      ansible.builtin.user:
+        name: ansible
+        state: present
+        groups: sudo
+
+    - name: Create .ssh directory for ansible
+      ansible.builtin.file:
+        path: /home/ansible/.ssh
+        state: directory
+        owner: ansible
+        group: ansible
+        mode: '0700'
+
+    - name: Copy SSH key to ansible's authorized_keys
+      ansible.builtin.copy:
+        src: /home/ubuntu/.ssh/ansible.pub
+        dest: /home/ansible/.ssh/authorized_keys
+        owner: ansible
+        group: ansible
+        mode: '0600'
+
+    - name: Ensure known_hosts file exists
+      ansible.builtin.file:
+        path: /home/ansible/.ssh/known_hosts
+        state: touch
+        owner: ansible
+        group: ansible
+        mode: '0644'
+
+    - name: Add SSH fingerprint to known_hosts
+      ansible.builtin.shell: ssh-keyscan -H {{ inventory_hostname }} >> /home/ansible/.ssh/known_hosts
+      args:
+        creates: /home/ansible/.ssh/known_hosts
+      become: true
+      become_user: ansible
+
+    - name: Disable strict host key checking for ansible
+      ansible.builtin.lineinfile:
+        path: /home/ansible/.ssh/config
+        line: "StrictHostKeyChecking no"
+        create: true
+        owner: ansible
+        group: ansible
+        mode: '644'

@@ -1,0 +1,17 @@
+---
+- name: Create user on pi_servers
+  hosts: learnlinux 
+  become: true
+  become_user: root
+  vars_files:
+   - vars/users.yml
+
+  tasks:
+   - name: Create users
+     user:
+      name: "{{ item.user }}"
+      create_home: yes
+      comment: "{{ item.comment }}"
+      uid: "{{ item.uid }}"
+      state: "{{ item.state }}"
+     with_items: "{{ user }}"

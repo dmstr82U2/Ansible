@@ -1,16 +1,14 @@
 ---
-- hosts: test_linux
+- name: Manage SSH users
+  hosts: alpha
   vars_files:
     - users.yml
 
   tasks:
-  - name: Create a user
-    user:
-      name: "{{item.user}}"
-      comment: "{{item.comment}}"
-      uid: "{{item.uid}}"
-      state: "{{item.state}}"
-    with_items: "{{ user }}"
-   
-
-    
+    - name: Create a user
+      ansible.builtin.user:
+        name: "{{ item.user }}"
+        comment: "{{ item.comment }}"
+        uid: "{{ item.uid }}"
+        state: "{{ item.state }}"
+      with_items: "{{ user }}" 
