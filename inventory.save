@@ -6,7 +6,7 @@ automation
 dm-kasm
 dockerstuff
 # homeassistant
-# learnlinux
+learnlinux
 netbootxyz
 pi.hole
 piholect2
@@ -14,10 +14,10 @@ piholect2
 semaphorevm
 # 192.168.1.6 #prxmox
 192.168.1.8 #proxmox3 
-node-red
+spare-linux
 192.168.1.18 #traefik
 n8n
-192.168.1.2 #laptop2
+192.168.1.2  #laptop2
 # 192.168.1.28 #pbsbackup 
 netbootxyz
 zibee2mqtt
